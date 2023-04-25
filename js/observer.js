@@ -56,10 +56,11 @@ const listItems = document.querySelectorAll('#copyButtons div ul li');
 // add click event listeners to each list item
 listItems.forEach((item, index) => {
   item.addEventListener('click', () => {
-    // select the corresponding heading text
-    const headingText = activeHeading.textContent;
-    
-    // copy the text to the clipboard
-    navigator.clipboard.writeText(headingText);
+    // select the corresponding heading element based on the index of the clicked li
+    const headings = sections[currentSectionIndex].querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const clickedHeading = headings[index];
+
+    // copy the heading text to the clipboard
+    navigator.clipboard.writeText(clickedHeading.textContent);
   });
 });
