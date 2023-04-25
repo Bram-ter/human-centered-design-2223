@@ -51,10 +51,11 @@ buttons.forEach((button, index) => {
 // * Copy * //
 
 // select the list items
-const listItems = document.querySelectorAll('#copyButtons div ul li');
+const firstList = document.querySelectorAll('#copyButtons div:nth-of-type(2) ul li');
+const secondList = document.querySelectorAll('#copyButtons div:nth-of-type(3) ul li');
 
 // add click event listeners to each list item
-listItems.forEach((item, index) => {
+firstList.forEach((item, index) => {
   item.addEventListener('click', () => {
     // select the corresponding heading element based on the index of the clicked li
     const headings = sections[currentSectionIndex].querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -62,5 +63,17 @@ listItems.forEach((item, index) => {
 
     // copy the heading text to the clipboard
     navigator.clipboard.writeText(clickedHeading.textContent);
+  });
+});
+
+// add click event listeners to each list item
+secondList.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    // select the corresponding heading element based on the index of the clicked li
+    const texts = sections[currentSectionIndex].querySelectorAll('section p');
+    const clickedText = texts[index];
+
+    // copy the heading text to the clipboard
+    navigator.clipboard.writeText(clickedText.textContent);
   });
 });
