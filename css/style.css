@@ -4,21 +4,137 @@
 }
 
 body, html {
+    scroll-snap-type: y mandatory;
     padding: 0;
     margin: 0;
     font-family: 'Roboto';
+}
+
+.active {
+    transition: 2s;
+}
+
+.display {
+    display: block !important;
+}
+
+#copyButtons {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#scrollButtons {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    justify-content: space-evenly;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#copyButtons div,
+#scrollButtons li {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 10em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    background-color: red;
+    border: 2px transparent solid;
+}
+
+#copyButtons div {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#copyButtons div ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    transform: translateX(8em);
+    height: 100%;
+}
+
+#copyButtons div ul li {
+    position: absolute;
+    height: 25%;
+    background-color: green;
+}
+
+#copyButtons div ul li:hover {
+    background-color: #65e7fb;
+    border: 2px blue solid;
+}
+
+#copyButtons ul li:nth-of-type(1) {
+    top: calc(0% - 1em);
+    right: 0;
+}
+
+#copyButtons ul li:nth-of-type(2) {
+    top: 21%;
+    right: 0;
+}
+
+#copyButtons ul li:nth-of-type(3) {
+    top: 53%;
+    right: 0;
+}
+
+#copyButtons ul li:nth-of-type(4) {
+    top: calc(75% + 1em);
+    right: 0;
+}
+
+#copyButtons div:hover,
+#scrollButtons li:hover {
+    background-color: #fbf365;
+    border: 2px blue solid;
 }
 
 h1, h2, h3 {
     font-weight: 800;
 }
 
-section {
+body section {
+    scroll-snap-align: start;
     background-color: #fbf365;
     padding: 2em;
     margin: 0 auto;
+    margin-bottom: 2em;
     width: 50%;
     height: 100vh;
+}
+
+body span {
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    font-size: 2em;
+    left: 0;
+    right: 0;
 }
 
 textarea {
