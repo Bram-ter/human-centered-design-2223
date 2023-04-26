@@ -61,6 +61,15 @@ firstList.forEach((item, index) => {
     const headings = sections[currentSectionIndex].querySelectorAll('h1, h2, h3, h4, h5, h6');
     const clickedHeading = headings[index];
 
+    // Show the alert
+    alert.innerHTML = `Het ${index + 1}de kop tekst is gekopieerd!`;
+    alert.style.display = "block";
+
+    // Remove the alert
+    setTimeout(() => {
+      alert.style.display = "none";
+    }, 2000);
+
     // copy the heading text to the clipboard
     navigator.clipboard.writeText(clickedHeading.textContent);
   });
@@ -72,6 +81,15 @@ secondList.forEach((item, index) => {
     // select the corresponding heading element based on the index of the clicked li
     const texts = sections[currentSectionIndex].querySelectorAll('section p');
     const clickedText = texts[index];
+
+    // Show the alert
+    alert.innerHTML = `Het ${index + 1}de stukje tekst is gekopieerd!`;
+    alert.style.display = "block";
+
+    // Remove the alert
+    setTimeout(() => {
+      alert.style.display = "none";
+    }, 2000);
 
     // copy the heading text to the clipboard
     navigator.clipboard.writeText(clickedText.textContent);
