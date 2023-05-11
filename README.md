@@ -6,7 +6,7 @@ Voor het vak Human Centered Design is mij de taak gegeven om te ontwerpen voor e
 <img src="./assets/screenshot_website.png" alt="image van mijn gemaakte website">
 
 ## Onderzoeksvraag
-### Tijdens deze 3 weken heb ik mijzelf veel vragen gesteld, hiervan was de meest belangrijke:
+#### Tijdens deze 3 weken heb ik mijzelf veel vragen gesteld, hiervan was de meest belangrijke:
 > Hoe kan ik ervoor zorgen dat Nicolette tekst kan kopiëren zonder het gebruik van een muis?
 
 ## Waar loopt Nicolette eigenlijk tegenaan?
