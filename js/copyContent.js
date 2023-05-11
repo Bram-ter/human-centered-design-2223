@@ -1,5 +1,9 @@
 // * Globals * //
 
+document.getElementById('discoButton').addEventListener('click', function() {
+  document.body.classList.toggle('disco');
+});
+
 const alert = document.querySelector("body span");
 alert.style.display = "none";  
 

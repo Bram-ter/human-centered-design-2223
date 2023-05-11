@@ -75,9 +75,20 @@ body, html {
     height: 100%;
 }
 
+#discoButton {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
 #copyButtons div ul li {
     position: absolute;
     height: 25%;
+    padding: .2em;
     background-color: #3493e1;
 }
 
@@ -142,3 +153,21 @@ textarea {
     height: 20vh;
     width: 100%;
 }
+
+@keyframes disco {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .disco {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 200% auto;
+    animation: disco 5s linear infinite;
+  }
